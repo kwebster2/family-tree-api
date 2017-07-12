@@ -1,5 +1,6 @@
 module.exports = function(app, db) {
   app.post('/people', (req, res) => {
+        debugger;
     const person = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -9,7 +10,7 @@ module.exports = function(app, db) {
       if (err) {
         res.send({ 'error': 'An error has occurred' });
       } else {
-        res.send(result.ops[0]);
+        res.send(result.ops);
       }
       });
   });
