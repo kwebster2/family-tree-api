@@ -1,6 +1,5 @@
 module.exports = function(app, db) {
   app.post('/people', (req, res) => {
-        debugger;
     const person = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
